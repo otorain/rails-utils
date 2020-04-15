@@ -53,7 +53,7 @@ $ gem install ian-utils
   # Object#wrap_line
   wrap_line { p "11111"}
   # "--------------------"
-  # 1
+  # 11111
   # "--------------------"
   # => nil
  
