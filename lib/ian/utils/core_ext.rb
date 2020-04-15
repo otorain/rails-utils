@@ -45,7 +45,7 @@ ActionController::Base.class_eval do
   end
 end
 
-def wrap_line(sign = "=")
+def wrap_line(sign = "-")
   p sign * 20
   yield
   p sign * 20
