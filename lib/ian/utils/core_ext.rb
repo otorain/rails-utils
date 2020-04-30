@@ -52,6 +52,13 @@ def wrap_line(sign = "-")
   nil
 end
 
+# 使用逗号连接有 join 方法的对象，如数组
+def comma_join(list)
+  if list.respond_to? :join
+    list.join ', '
+  end
+end
+
 # ActionController::API.class_eval do
 #   def success(*options)
 #     render json: {
