@@ -45,6 +45,22 @@ ActionController::Base.class_eval do
   end
 end
 
+ApplicationController.class_eval do
+  def success_response(**options)
+    render json: {
+        code: 200,
+        result: 'ok'
+    }.merge!(options), status: 200
+  end
+
+  def fail_response(**options)
+    render json: {
+        code: 400,
+        result: 'fail'
+    }.merge!(options), status: 400
+  end
+end
+
 def wrap_line(sign = "-")
   p sign * 20
   yield
