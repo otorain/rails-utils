@@ -45,7 +45,7 @@ ActionController::Base.class_eval do
   end
 end
 
-ApplicationController.class_eval do
+ActionController::API.class_eval do
   def success_response(**options)
     render json: {
         code: 200,
