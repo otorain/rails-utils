@@ -62,6 +62,10 @@ $ gem install ian-utils
   # "111"
   # "aaaaaaaaaaaaaaaaaaaa"
   # => nil
+
+  # comma_join(array)
+  comma_join [:a, :b, :c]
+  # => a, b, c
 ```
 
 
